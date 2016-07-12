@@ -409,7 +409,7 @@
 			buildSettings = {
 				INFOPLIST_FILE = "$(SRCROOT)/MSInteractBubbleTransition/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.MS.MSAnimatedTransition;
+				PRODUCT_BUNDLE_IDENTIFIER = com.MS.MSInteractBubbleTransition;
 				PRODUCT_NAME = MSInteractBubbleTransition;
 			};
 			name = Debug;
@@ -419,7 +419,7 @@
 			buildSettings = {
 				INFOPLIST_FILE = "$(SRCROOT)/MSInteractBubbleTransition/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.MS.MSAnimatedTransition;
+				PRODUCT_BUNDLE_IDENTIFIER = com.MS.MSInteractBubbleTransition;
 				PRODUCT_NAME = MSInteractBubbleTransition;
 			};
 			name = Release;
