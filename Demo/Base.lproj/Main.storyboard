@@ -42,13 +42,15 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="ozx-fI-NQi"/>
                                 </constraints>
-                                <state key="normal" title="Show"/>
+                                <state key="normal" title="Show">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <segue destination="qXP-Ao-CCP" kind="presentation" identifier="PresentSegue" id="90j-on-Dui"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.58503525599999995" blue="0.0055626772360000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Q98-y4-Jhv" firstAttribute="top" secondItem="wSD-H8-fhi" secondAttribute="bottom" constant="462" id="3yS-0J-z73"/>
                             <constraint firstItem="Q98-y4-Jhv" firstAttribute="centerX" secondItem="3H2-w2-wne" secondAttribute="centerX" id="4qn-iR-1CL"/>
@@ -78,7 +80,9 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="20C-VS-xN0">
                                 <rect key="frame" x="273" y="504" width="54" height="30"/>
-                                <state key="normal" title="Dismiss"/>
+                                <state key="normal" title="Dismiss">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <segue destination="pik-sp-BkL" kind="unwind" identifier="DismissSegue" unwindAction="unwindToMainViewController:" id="2mb-dd-rmt"/>
                                 </connections>
