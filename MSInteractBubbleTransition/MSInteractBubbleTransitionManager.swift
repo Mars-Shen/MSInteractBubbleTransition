@@ -37,7 +37,7 @@ final class MSInteractBubbleTransitionManager : UIPercentDrivenInteractiveTransi
         let view        = gestureRecognizer.view!
         let translation = gestureRecognizer.translationInView(view)
         
-        let percentage = min(max(translation.y / (2 * view.bounds.height / 3), 0), 1)
+        let percentage = min(max(translation.y / (2 * view.bounds.height / 5), 0), 1)
         let location  = gestureRecognizer.locationInView(view)
         let percentageHeight = min(max(location.y / view.bounds.height, 0), 1)
         
