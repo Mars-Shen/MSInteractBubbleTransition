@@ -24,7 +24,7 @@ TODO: Add long description of the pod here.
   s.homepage         = 'https://github.com/<GITHUB_USERNAME>/MSInteractBubbleTransition'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'Mars Shen' => 'look1239@qq.com' }
+  s.author           = { 'Mars Shen' => 'look1239@gmail.com' }
   s.source           = { :git => 'https://github.com/<GITHUB_USERNAME>/MSInteractBubbleTransition.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 

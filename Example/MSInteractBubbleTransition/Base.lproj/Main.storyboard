@@ -1,25 +1,104 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="qOL-pZ-47L">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="ufC-wZ-h7g">
+        <!--Navigation Controller-->
+        <scene sceneID="rnS-Hf-a60">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController navigationBarHidden="YES" id="qOL-pZ-47L" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="IxS-tR-bOB">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="vaz-xK-SIG">
+                        <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="OCt-uf-Dbe" kind="relationship" relationship="rootViewController" id="Ueh-ED-uFL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ca0-t3-702" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-336" y="761"/>
+        </scene>
+        <!--Main View Controller-->
+        <scene sceneID="3la-qp-nC3">
+            <objects>
+                <viewController id="OCt-uf-Dbe" customClass="MainViewController" customModule="MSInteractBubbleTransition_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
-                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                        <viewControllerLayoutGuide type="top" id="wSD-H8-fhi"/>
+                        <viewControllerLayoutGuide type="bottom" id="Pjf-CX-XVJ"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                    <view key="view" contentMode="scaleToFill" id="3H2-w2-wne">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q98-y4-Jhv">
+                                <rect key="frame" x="225" y="482" width="150" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="ozx-fI-NQi"/>
+                                </constraints>
+                                <state key="normal" title="Show">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="qXP-Ao-CCP" kind="presentation" identifier="PresentSegue" id="90j-on-Dui"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Q98-y4-Jhv" firstAttribute="top" secondItem="wSD-H8-fhi" secondAttribute="bottom" constant="462" id="3yS-0J-z73"/>
+                            <constraint firstItem="Q98-y4-Jhv" firstAttribute="centerX" secondItem="3H2-w2-wne" secondAttribute="centerX" id="4qn-iR-1CL"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="I1E-3S-sjM"/>
+                    <connections>
+                        <outlet property="manager" destination="MlM-b3-bYq" id="Zqg-AH-R4H"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PHn-6P-dXl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="MlM-b3-bYq" customClass="MSInteractBubbleTransitionManager" customModule="MSInteractBubbleTransition"/>
+            </objects>
+            <point key="canvasLocation" x="470" y="761"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="EYx-4J-vel">
+            <objects>
+                <viewController id="qXP-Ao-CCP" customClass="SecondViewController" customModule="MSInteractBubbleTransition_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Wza-cn-aMi"/>
+                        <viewControllerLayoutGuide type="bottom" id="XX1-wv-Itb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="YOQ-qz-Lok">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="20C-VS-xN0">
+                                <rect key="frame" x="273" y="504" width="54" height="30"/>
+                                <state key="normal" title="Dismiss">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="pik-sp-BkL" kind="unwind" identifier="DismissSegue" unwindAction="unwindToMainViewController:" id="2mb-dd-rmt"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="20C-VS-xN0" firstAttribute="centerX" secondItem="YOQ-qz-Lok" secondAttribute="centerX" id="JMC-Uf-fmn"/>
+                            <constraint firstItem="20C-VS-xN0" firstAttribute="centerY" secondItem="YOQ-qz-Lok" secondAttribute="centerY" constant="219" id="XHG-2U-fSG"/>
+                        </constraints>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xgX-Xu-LzF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="pik-sp-BkL" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
+            <point key="canvasLocation" x="464" y="1652"/>
         </scene>
     </scenes>
 </document>

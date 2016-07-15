@@ -1,0 +1,6 @@
+framework module Pods_MSInteractBubbleTransition_Tests {
+  umbrella header "Pods-MSInteractBubbleTransition_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

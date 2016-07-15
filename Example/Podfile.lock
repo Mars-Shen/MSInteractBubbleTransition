@@ -1,0 +1,16 @@
+PODS:
+  - MSInteractBubbleTransition (0.1.0)
+
+DEPENDENCIES:
+  - MSInteractBubbleTransition (from `../`)
+
+EXTERNAL SOURCES:
+  MSInteractBubbleTransition:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  MSInteractBubbleTransition: da4fc93b2165e19551f86a12852e37f8533ab74e
+
+PODFILE CHECKSUM: 56ffb4b208a57897d5d2a7c3e63257be78fcc380
+
+COCOAPODS: 1.0.1
