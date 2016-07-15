@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'MSInteractBubbleTransition_Example' do
+  pod 'MSInteractBubbleTransition', :path => '../'
+
+  target 'MSInteractBubbleTransition_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
