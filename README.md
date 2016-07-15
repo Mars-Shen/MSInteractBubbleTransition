@@ -51,7 +51,35 @@ If you want interactive that bubble transition you need to implement the `MSInte
 Check Demo
 
 ## Installation
-//TBD
+#### CocoaPods
+Go to the directory of your Xcode project, and Create and Edit your Podfile and add _MSInteractBubbleTransition_:
+
+``` bash
+$ cd /path/to/MyProject
+$ touch Podfile
+$ edit Podfile
+
+platform :ios, ‘8.0’
+
+use_frameworks!
+
+target <your_project> do
+    pod 'MSInteractBubbleTransition', :git => 'https://github.com/Mars-Shen/MSInteractBubbleTransition.git'
+end
+```
+
+Install into your project:
+
+``` bash
+$ pod install
+```
+
+Open your project in Xcode from the .xcworkspace file (not the usual project file):
+
+``` bash
+$ open MyProject.xcworkspace
+```
+You can now `import MSInteractBubbleTransition` framework into your files.
 
 ## License
 
