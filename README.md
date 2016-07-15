@@ -16,36 +16,37 @@ add a `MSInteractBubbleTransitionManager` object that acts as `transitioningDele
 ```swift
 let manager: MSInteractBubbleTransitionManager = MSInteractBubbleTransitionManager()
 override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-if segue.identifier == PresentSegueName {
-let vc = segue.destinationViewController
-vc.transitioningDelegate = manager
-}
-}
+        if segue.identifier == PresentSegueName {
+           let vc = segue.destinationViewController
+           vc.transitioningDelegate = manager
+        }
+    }
 ```
 If you want interactive that bubble transition you need to implement the `MSInteractBubbleTransitionDelegate` methods and defines the views which will interact with the gestures:
 ```swift
-override func viewDidLoad() {
-super.viewDidLoad()
-//Assign self as manager's delegate
-manager.delegate = self
-}
+   override func viewDidLoad() {
+        super.viewDidLoad()
+        //Assign self as manager's delegate
+        manager.delegate = self
+    }
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-if segue.identifier == PresentSegueName {
-let vc = segue.destinationViewController
-secoundViewController = vc
-//Set pan to dismiss gesture
-manager.setPanToDismissGesture(vc.view)
-vc.transitioningDelegate = manager
-}
-}
-
-//Implement that method in MSInteractBubbleTransitionDelegate
-func MSInteractBubbleTransitionNeedDismiss(vMSInteractBubbleTransitionManager: MSInteractBubbleTransitionManager){
-secoundViewController?.performSegueWithIdentifier(DismissSegueName, sender: self)
-}
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == PresentSegueName {
+            let vc = segue.destinationViewController
+            secoundViewController = vc
+            //Set pan to dismiss gesture
+            manager.setPanToDismissGesture(vc.view)
+            vc.transitioningDelegate = manager
+        }
+    }
+ 
+    //Implement that method in MSInteractBubbleTransitionDelegate
+    func MSInteractBubbleTransitionNeedDismiss(vMSInteractBubbleTransitionManager: MSInteractBubbleTransitionManager){
+        secoundViewController?.performSegueWithIdentifier(DismissSegueName, sender: self)
+    }
 ```
+  
 ### For more information
 Check Demo
 
