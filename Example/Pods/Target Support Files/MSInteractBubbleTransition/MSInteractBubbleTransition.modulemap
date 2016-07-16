@@ -1,6 +1,0 @@
-framework module MSInteractBubbleTransition {
-  umbrella header "MSInteractBubbleTransition-umbrella.h"
-
-  export *
-  module * { export * }
-}
