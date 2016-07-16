@@ -48,7 +48,10 @@ If you want interactive that bubble transition you need to implement the `MSInte
 ```
   
 ### For more information
-Check Demo
+
+Check Example in this project
+
+First run `pod install` in Example dirctory in bash, then open `MSInteractBubbleTransition.xcworkspace`
 
 ## Installation
 #### CocoaPods
